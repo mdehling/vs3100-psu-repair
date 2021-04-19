@@ -1,0 +1,68 @@
+# DIGITAL VAXstation 3100 PSU Repair
+Malte Dehling <mdehling@gmail.com>
+
+:imagesdir: https://raw.githubusercontent.com/1k5/vs3100-psu-repair/main/img/
+
+
+The VAXstation 3100 power supplies are plagued with the usual leaky capacitor
+issues.  In most cases, they are fairly easy to fix by simple cleaning the
+board with isopropanol and replacing the capacitors.  One slight annoyance is
+that the boards have no part designators and no polarity indication.  Hence I
+took some notes.
+
+
+Model H7821-00
+--------------
+This is the PSU in the smaller BA42-A enclosure as used for at least the
+following machines:
+
+* VAXstation 3100 M30, M38, M76
+* MicroVAX/VAXserver 3100 M10, M10e, M30
+* InfoServer 150
+* DECstation 2100
+* Storage Expansion
+
+Here is a view of the main PCB from above, i.e., component side up:
+
+image::h7821-00.svg["H7821-00 Capacitor Locations"]
+
+Note that C15 and C16 are mounted to little daughter boards.  The negative
+side for C15 is the one closest to the main PCB.
+
+The original capacitor values are as follows:
+
+[%autowidth]
+|===
+| Designator | Quantity | Description
+
+| C1–C5      | 5        | 1800uF 25V 105C, low ESR
+| C6, C11    | 2        | 330uF 25V 85C
+| C7–C10     | 4        | 10uF 35V 85C
+| C12        | 1        | 470uF 25V 85C
+| C13, C14   | 2        | 470uF 250WV 105C
+| C15        | 1        | 39uF 16V 85C
+| C16        | 1        | 47uF 16V 105C
+|===
+
+I usually replace all of these by 105C capacitors of the same or higher
+voltage, and use either 33uF or 47uF for C15.  Make sure to use low ESR parts
+for C1–C5!
+
+NOTE: In my experience, testing the PSU without a load works well enough.  The
+fans come on and the voltages are about right.  However, the LED doesn't light
+up until there is at least some load.
+
+
+Model H7822-00
+--------------
+This is the PSU in the larger BA42-B enclosure as used for at least the
+following machines:
+
+* VAXstation 3100 M40, M48
+* MicroVAX/VAXserver 3100 M20, M20e, M40, M80, M85, M88, M90, M95, M96, M98
+* InfoServer 100
+* DECstation 3100
+* DECsystem 5100
+
+(Coming soon...)
+
