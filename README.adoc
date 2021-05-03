@@ -64,5 +64,23 @@ following machines:
 * DECstation 3100
 * DECsystem 5100
 
-(Coming soon...)
+The PSU consists of two large PCBs, one of which is identical to the one from
+the smaller Model H7821-00 PSU above.  Here is a view of the second PCB, again
+component side up:
 
+image::h7822-00.svg["H7822-00 Capacitor Locations",width=80%]
+
+The original capacitor values on this board are as follows:
+
+[%autowidth]
+|===
+| Designator | Quantity | Description
+
+| C20        | 1        | 220uF 400WV 85C
+| C21        | 1        | 330uF 50V 85C
+| C22        | 1        | 47uF 16V 105C
+| C23–C26    | 4        | 1800uF 25V 105C, low ESR
+|===
+
+Note that for a full PSU recap you will need these parts _and_ those listed
+for the Model H7821-00.
