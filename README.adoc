@@ -1,7 +1,7 @@
 # DIGITAL VAXstation 3100 PSU Repair
 Malte Dehling <mdehling@gmail.com>
 
-:imagesdir: https://raw.githubusercontent.com/1k5/vs3100-psu-repair/main/img/
+:imagesdir: https://raw.githubusercontent.com/mdehling/vs3100-psu-repair/main/img/
 
 
 The VAXstation 3100 power supplies are plagued with the usual leaky capacitor
